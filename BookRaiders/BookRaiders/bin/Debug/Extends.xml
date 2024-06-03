@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BookRaiders</name>
+    </assembly>
+    <members>
+        <member name="T:BookRaiders.Earlybound.BKRZ_TabElatesTe.Fields">
+            <summary>
+            Available fields, a the time of codegen, for the bkrz_tabelateste entity
+            </summary>
+        </member>
+        <member name="M:BookRaiders.Earlybound.BKRZ_TabElatesTe.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.BKRZ_TabElatesTeId">
+            <summary>
+            Identificador exclusivo de instâncias de entidade
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.CreatedBy">
+            <summary>
+            Identificador exclusivo do usuário que criou o registro.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.CreatedOn">
+            <summary>
+            Data e hora de criação do registro.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.CreatedOnBehalfBy">
+            <summary>
+            Identificador exclusivo do usuário delegado que criou o registro.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.ImportSequenceNumber">
+            <summary>
+            Número de sequência da importação que criou este registro.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.ModifiedBy">
+            <summary>
+            Identificador exclusivo do usuário que modificou o registro.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.ModifiedOn">
+            <summary>
+            Data e hora de modificação do registro.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.ModifiedOnBehalfBy">
+            <summary>
+            Identificador exclusivo do usuário delegado que modificou o registro.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.OrganizationId">
+            <summary>
+            Identificador exclusivo da organização
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.OverriddenCreatedOn">
+            <summary>
+            Data e hora da migração do registro.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.StateCode">
+            <summary>
+            Status de TabelaTeste
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.StatusCode">
+            <summary>
+            Razão do status de TabelaTeste
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.TimeZoneRuleVersionNumber">
+            <summary>
+            Somente para uso interno.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.UtcConversionTimeZoneCode">
+            <summary>
+            Código de fuso horário em uso quando o registro foi criado.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.BKRZ_TabElatesTe.VersionNumber">
+            <summary>
+            Número da Versão
+            </summary>
+        </member>
+        <member name="M:BookRaiders.Earlybound.BKRZ_TabElatesTe.#ctor(System.Object)">
+            <summary>
+            Constructor for populating via LINQ queries given a LINQ anonymous type
+            <param name="anonymousType">LINQ anonymous type.</param>
+            </summary>
+        </member>
+        <member name="T:BookRaiders.Earlybound.CrmServiceContext">
+            <summary>
+            Represents a source of entities bound to a CRM service. It tracks and manages changes made to the retrieved entities.
+            </summary>
+        </member>
+        <member name="M:BookRaiders.Earlybound.CrmServiceContext.#ctor(Microsoft.Xrm.Sdk.IOrganizationService)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="T:BookRaiders.Earlybound.OptionSetMetadataAttribute">
+            <summary>
+            Attribute to handle storing the OptionSet's Metadata.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.OptionSetMetadataAttribute.Color">
+            <summary>
+            Color of the OptionSetValue.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.OptionSetMetadataAttribute.Description">
+            <summary>
+            Description of the OptionSetValue.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.OptionSetMetadataAttribute.DisplayIndex">
+            <summary>
+            Display order index of the OptionSetValue.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.OptionSetMetadataAttribute.ExternalValue">
+            <summary>
+            External value of the OptionSetValue.
+            </summary>
+        </member>
+        <member name="P:BookRaiders.Earlybound.OptionSetMetadataAttribute.Name">
+            <summary>
+            Name of the OptionSetValue.
+            </summary>
+        </member>
+        <member name="M:BookRaiders.Earlybound.OptionSetMetadataAttribute.#ctor(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BookRaiders.Earlybound.OptionSetMetadataAttribute"/> class.
+            </summary>
+            <param name="name">Name of the value.</param>
+            <param name="displayIndex">Display order index of the value.</param>
+            <param name="color">Color of the value.</param>
+            <param name="description">Description of the value.</param>
+            <param name="externalValue">External value of the value.</param>
+        </member>
+        <member name="T:BookRaiders.Earlybound.OptionSetExtension">
+            <summary>
+            Extension class to handle retrieving of OptionSetMetadataAttribute.
+            </summary>
+        </member>
+        <member name="M:BookRaiders.Earlybound.OptionSetExtension.GetMetadata``1(``0)">
+            <summary>
+            Returns the OptionSetMetadataAttribute for the given enum value
+            </summary>
+            <typeparam name="T">OptionSet Enum Type</typeparam>
+            <param name="value">Enum Value with OptionSetMetadataAttribute</param>
+        </member>
+        <member name="T:BookRaiders.Earlybound.BKRZ_TabElatesTe_StateCode">
+            <summary>
+            Status de TabelaTeste
+            </summary>
+        </member>
+        <member name="T:BookRaiders.Earlybound.BKRZ_TabElatesTe_StatusCode">
+            <summary>
+            Razão do status de TabelaTeste
+            </summary>
+        </member>
+    </members>
+</doc>
