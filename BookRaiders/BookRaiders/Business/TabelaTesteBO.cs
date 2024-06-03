@@ -15,7 +15,6 @@ namespace BookRaiders.Business
         private IOrganizationService serviceAdmin;
         private ITracingService tracingService;
 
-
         public TabelaTesteBO(IOrganizationService service)
         {
             this.service = service;
@@ -25,7 +24,7 @@ namespace BookRaiders.Business
         {
             BKRZ_TabElatesTe atualizarTabelaTeste = new BKRZ_TabElatesTe();
             atualizarTabelaTeste.Id = tabelaTeste.Id;
-            atualizarTabelaTeste.BKRZ_CPF = "TESTE";
+            // atualizarTabelaTeste.BKRZ_CPF = "TESTE";
 
             service.Update(atualizarTabelaTeste);
         }
