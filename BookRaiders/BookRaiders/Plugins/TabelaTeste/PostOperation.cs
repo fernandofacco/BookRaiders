@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.Configuration;
 using BookRaiders.Business;
 
-namespace BookRaiders.Plugins.Account
+namespace BookRaiders.Plugins.TabelaTeste
 {
     public class PostOperation : PluginBase
     {

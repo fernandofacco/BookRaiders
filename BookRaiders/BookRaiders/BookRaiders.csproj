@@ -116,6 +116,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\BusinessBase.cs" />
     <Compile Include="Business\TabelaTesteBO.cs" />
     <Compile Include="Earlybound\bkrz_tabelateste.cs" />
     <Compile Include="Earlybound\CrmServiceContext.cs" />
