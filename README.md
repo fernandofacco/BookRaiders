@@ -16,5 +16,7 @@ A partir desde momento você está pronto para fazer modificações no projeto.
 
 Após uma modificação ser feita, você deve fazer o seguinte:
 
-1- Atualizar o código modificado em seu visual studio para o GitHub (para os outros colegas terem acesso ao código mais atual)
-2- Atualizar o código no PowerApps (para que a solução tenha o código mais atualizado)
+
+1. Atualizar o código no PowerApps (para que a solução tenha o código mais atualizado)
+2. Testar plugin
+3. Atualizar o código modificado em seu visual studio para o GitHub (para os outros colegas terem acesso ao código mais atual)
