@@ -11,7 +11,7 @@ namespace BookRaiders.Business
 {
     public class TabelaTesteBO : BusinessBase
     {
-        public TabelaTesteBO(IOrganizationService service) : base(service)
+        public TabelaTesteBO(IOrganizationService service, IOrganizationService serviceAdmin) : base(service, serviceAdmin)
         {
         }
 

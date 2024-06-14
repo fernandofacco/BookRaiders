@@ -11,18 +11,27 @@ using System.Web.UI.WebControls;
 using System.Web.Configuration;
 using BookRaiders.Business;
 
-namespace BookRaiders.Plugins.TabelaTeste
+namespace BookRaiders.Plugins.Usuario
 {
-    public class PostOperation : PluginBase
+    public class PreValidation : PluginBase
     {
         protected override void ExecutePlugin(IPluginExecutionContext context, IOrganizationServiceFactory serviceFactory, IOrganizationService service, IOrganizationService serviceAdmin)
         {
             if (context.MessageName.ToLower() == "create")
             {
-                var tabelaTeste = GetTarget<BKRZ_TabElatesTe>(context);
-                var tabelaTesteBO = new TabelaTesteBO(service, serviceAdmin);
+                var usuario = GetTarget<bkrs_usuario>(context);
+                var usuarioBO = new UsuarioBO(service, serviceAdmin); 
 
-                tabelaTesteBO.AlterarCpf(tabelaTeste);
+                usuarioBO.VerificarCpfExistente(usuario);
+            }
+            if (context.MessageName.ToLower() == "update")
+            {
+                var usuario = GetTarget<bkrs_usuario>(context);
+                var usuarioImg = GetPreImage<bkrs_usuario>(context);
+
+                var usuarioBO = new UsuarioBO(service, serviceAdmin);
+
+                usuarioBO.VerificarCpfExistente(usuario);
             }
         } 
     }

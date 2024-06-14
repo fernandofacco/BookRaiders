@@ -17,5 +17,11 @@ namespace BookRaiders.Business
         {
             this.service = service;
         }
+
+        public BusinessBase(IOrganizationService service, IOrganizationService serviceAdmin)
+        {
+            this.service = service;
+            this.serviceAdmin = serviceAdmin;
+        }
     }
 }

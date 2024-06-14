@@ -12,17 +12,19 @@ namespace BookRaiders.Plugins
         private IPluginExecutionContext context { get; set; }
         private IOrganizationServiceFactory serviceFactory { get; set; }
         private IOrganizationService service { get; set; }
+        private IOrganizationService serviceAdmin { get; set; }
 
         public void Execute(IServiceProvider serviceProvider)
         {
             this.context = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
             this.serviceFactory = (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
             this.service = serviceFactory.CreateOrganizationService(context.UserId);
+            this.serviceAdmin = serviceFactory.CreateOrganizationService(null);
 
-            ExecutePlugin(this.context, this.serviceFactory, this.service);
+            ExecutePlugin(this.context, this.serviceFactory, this.service, this.serviceAdmin);
         }
 
-        protected virtual void ExecutePlugin(IPluginExecutionContext context, IOrganizationServiceFactory serviceFactory, IOrganizationService service)
+        protected virtual void ExecutePlugin(IPluginExecutionContext context, IOrganizationServiceFactory serviceFactory, IOrganizationService service, IOrganizationService serviceAdmin)
         {
 
         }
