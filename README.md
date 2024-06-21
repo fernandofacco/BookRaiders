@@ -9,7 +9,7 @@ Os códigos em CSharp que estão aqui disponíveis no GitHub precisam ser enviad
 2. Instalar .NET 4.7.1 (https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net471-developer-pack-offline-installer)
 3. Baixar o Visual Studio
 4. Configurar o Visual Studio para o pacote .NET (pacote necessário para trabalhar com a linguagem de programação CSharp)
-5. Configurar o Visual Studio para importar o código a partir deste repositório (clonar e abrir solução)
+5. Configurar o Visual Studio para importar o código a partir deste repositório (clonar a partir do link https://github.com/fernandofacco/BookRaiders/ e abrir solução)
 6. Talvez seja necessário mudar "Target Application" para ".NET Framework 4.7.1"
 
 A partir desde momento você está pronto para fazer modificações no projeto.
