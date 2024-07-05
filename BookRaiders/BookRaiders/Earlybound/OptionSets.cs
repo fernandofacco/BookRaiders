@@ -95,11 +95,11 @@ namespace BookRaiders.Earlybound
 
         [System.Runtime.Serialization.EnumMemberAttribute()]
         [OptionSetMetadataAttribute("Disponível", 0)]
-        DisponVel = 1,
+        Disponvel = 1,
 
         [System.Runtime.Serialization.EnumMemberAttribute()]
         [OptionSetMetadataAttribute("Indisponível", 1)]
-        IndisponVel = 2,
+        Indisponvel = 2,
     }
 
     /// <summary>
@@ -127,34 +127,30 @@ namespace BookRaiders.Earlybound
 
         [System.Runtime.Serialization.EnumMemberAttribute()]
         [OptionSetMetadataAttribute("Aceito", 2)]
-        Aceito = 709060003,
+        Aceito = 709060009,
 
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        [OptionSetMetadataAttribute("Atrasado", 7)]
-        Atrasado = 709060008,
+        [OptionSetMetadataAttribute("Atrasado", 4)]
+        Atrasado = 709060011,
 
         [System.Runtime.Serialization.EnumMemberAttribute()]
         [OptionSetMetadataAttribute("Cancelado", 6)]
-        Cancelado = 709060007,
+        Cancelado = 709060013,
 
         [System.Runtime.Serialization.EnumMemberAttribute()]
         [OptionSetMetadataAttribute("Concluído", 5)]
-        ConcluDo = 709060006,
+        Concluido = 709060012,
 
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        [OptionSetMetadataAttribute("Em Andamento", 4)]
-        EmAndamento = 709060005,
+        [OptionSetMetadataAttribute("Em Andamento", 3)]
+        EmAndamento = 709060010,
 
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        [OptionSetMetadataAttribute("Pendente", 1)]
-        Pendente = 709060002,
+        [OptionSetMetadataAttribute("Pendente", 0)]
+        Pendente = 709060001,
 
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        [OptionSetMetadataAttribute("Rascunho", 0)]
-        Rascunho = 709060001,
-
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        [OptionSetMetadataAttribute("Recusado", 3)]
-        Recusado = 709060004,
+        [OptionSetMetadataAttribute("Recusado", 1)]
+        Recusado = 709060008,
     }
 }

@@ -38,6 +38,30 @@ namespace BookRaiders.Earlybound
                 return this.CreateQuery<BookRaiders.Earlybound.bkrs_usuario>();
             }
         }
+        
+        /// <summary>
+        /// Gets a binding to the set of all <see cref="BookRaiders.Earlybound.bkrs_livro"/> entities.
+        /// </summary>
+        public System.Linq.IQueryable<BookRaiders.Earlybound.bkrs_livro> bkrs_livroSet
+        {
+            [System.Diagnostics.DebuggerNonUserCode()]
+            get
+            {
+                return this.CreateQuery<BookRaiders.Earlybound.bkrs_livro>();
+            }
+        }
+
+        /// <summary>
+        /// Gets a binding to the set of all <see cref="BookRaiders.Earlybound.bkrs_emprestimolivro"/> entities.
+        /// </summary>
+        public System.Linq.IQueryable<BookRaiders.Earlybound.bkrs_emprestimolivro> bkrs_emprestimolivroSet
+        {
+            [System.Diagnostics.DebuggerNonUserCode()]
+            get
+            {
+                return this.CreateQuery<BookRaiders.Earlybound.bkrs_emprestimolivro>();
+            }
+        }
     }
    
     internal sealed class EntityOptionSetEnum

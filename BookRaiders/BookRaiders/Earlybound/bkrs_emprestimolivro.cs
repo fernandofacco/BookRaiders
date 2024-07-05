@@ -24,16 +24,23 @@ namespace BookRaiders.Earlybound
             public const string bkrs_codigo = "bkrs_codigo";
             public const string bkrs_datadevolucao = "bkrs_datadevolucao";
             public const string bkrs_datadevolucaoestimada = "bkrs_datadevolucaoestimada";
-            public const string bkrs_emprestimolivro_livro_bkrs_livro = "bkrs_emprestimolivro_livro_bkrs_livro";
             public const string bkrs_emprestimolivroId = "bkrs_emprestimolivroid";
             public const string Id = "bkrs_emprestimolivroid";
             public const string bkrs_livro = "bkrs_livro";
             public const string bkrs_livroName = "bkrs_livroname";
             public const string bkrs_proprietariolivro = "bkrs_proprietariolivro";
+            public const string bkrs_proprietariolivrodevolvido = "bkrs_proprietariolivrodevolvido";
+            public const string bkrs_proprietariolivrodevolvidoName = "bkrs_proprietariolivrodevolvidoname";
+            public const string bkrs_proprietariolivroentregue = "bkrs_proprietariolivroentregue";
+            public const string bkrs_proprietariolivroentregueName = "bkrs_proprietariolivroentreguename";
             public const string bkrs_proprietariolivroName = "bkrs_proprietariolivroname";
             public const string bkrs_quantdiasemprestimo = "bkrs_quantdiasemprestimo";
             public const string bkrs_solicitantelivro = "bkrs_solicitantelivro";
+            public const string bkrs_solicitantelivrodevolvido = "bkrs_solicitantelivrodevolvido";
+            public const string bkrs_solicitantelivrodevolvidoName = "bkrs_solicitantelivrodevolvidoname";
             public const string bkrs_solicitantelivroName = "bkrs_solicitantelivroname";
+            public const string bkrs_solicitantelivrorecebido = "bkrs_solicitantelivrorecebido";
+            public const string bkrs_solicitantelivrorecebidoName = "bkrs_solicitantelivrorecebidoname";
             public const string CreatedBy = "createdby";
             public const string CreatedByName = "createdbyname";
             public const string CreatedByYomiName = "createdbyyominame";
@@ -216,6 +223,11 @@ namespace BookRaiders.Earlybound
                     return default(string);
                 }
             }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["bkrs_livro"] = value;
+            }
         }
 
         [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bkrs_proprietariolivro")]
@@ -233,6 +245,80 @@ namespace BookRaiders.Earlybound
             }
         }
 
+        [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bkrs_proprietariolivrodevolvido")]
+        public System.Nullable<bool> bkrs_proprietariolivrodevolvido
+        {
+            [System.Diagnostics.DebuggerNonUserCode()]
+            get
+            {
+                return this.GetAttributeValue<System.Nullable<bool>>("bkrs_proprietariolivrodevolvido");
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.SetAttributeValue("bkrs_proprietariolivrodevolvido", value);
+            }
+        }
+
+        [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bkrs_proprietariolivrodevolvidoname")]
+        public string bkrs_proprietariolivrodevolvidoName
+        {
+            [System.Diagnostics.DebuggerNonUserCode()]
+            get
+            {
+                if (this.FormattedValues.Contains("bkrs_proprietariolivrodevolvido"))
+                {
+                    return this.FormattedValues["bkrs_proprietariolivrodevolvido"];
+                }
+                else
+                {
+                    return default(string);
+                }
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["bkrs_proprietariolivrodevolvido"] = value;
+            }
+        }
+
+        [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bkrs_proprietariolivroentregue")]
+        public System.Nullable<bool> bkrs_proprietariolivroentregue
+        {
+            [System.Diagnostics.DebuggerNonUserCode()]
+            get
+            {
+                return this.GetAttributeValue<System.Nullable<bool>>("bkrs_proprietariolivroentregue");
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.SetAttributeValue("bkrs_proprietariolivroentregue", value);
+            }
+        }
+
+        [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bkrs_proprietariolivroentreguename")]
+        public string bkrs_proprietariolivroentregueName
+        {
+            [System.Diagnostics.DebuggerNonUserCode()]
+            get
+            {
+                if (this.FormattedValues.Contains("bkrs_proprietariolivroentregue"))
+                {
+                    return this.FormattedValues["bkrs_proprietariolivroentregue"];
+                }
+                else
+                {
+                    return default(string);
+                }
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["bkrs_proprietariolivroentregue"] = value;
+            }
+        }
+
         [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bkrs_proprietariolivroname")]
         public string bkrs_proprietariolivroName
         {
@@ -247,6 +333,11 @@ namespace BookRaiders.Earlybound
                 {
                     return default(string);
                 }
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["bkrs_proprietariolivro"] = value;
             }
         }
 
@@ -280,6 +371,43 @@ namespace BookRaiders.Earlybound
             }
         }
 
+        [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bkrs_solicitantelivrodevolvido")]
+        public System.Nullable<bool> bkrs_solicitantelivrodevolvido
+        {
+            [System.Diagnostics.DebuggerNonUserCode()]
+            get
+            {
+                return this.GetAttributeValue<System.Nullable<bool>>("bkrs_solicitantelivrodevolvido");
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.SetAttributeValue("bkrs_solicitantelivrodevolvido", value);
+            }
+        }
+
+        [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bkrs_solicitantelivrodevolvidoname")]
+        public string bkrs_solicitantelivrodevolvidoName
+        {
+            [System.Diagnostics.DebuggerNonUserCode()]
+            get
+            {
+                if (this.FormattedValues.Contains("bkrs_solicitantelivrodevolvido"))
+                {
+                    return this.FormattedValues["bkrs_solicitantelivrodevolvido"];
+                }
+                else
+                {
+                    return default(string);
+                }
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["bkrs_solicitantelivrodevolvido"] = value;
+            }
+        }
+
         [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bkrs_solicitantelivroname")]
         public string bkrs_solicitantelivroName
         {
@@ -295,6 +423,48 @@ namespace BookRaiders.Earlybound
                     return default(string);
                 }
             }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["bkrs_solicitantelivro"] = value;
+            }
+        }
+
+        [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bkrs_solicitantelivrorecebido")]
+        public System.Nullable<bool> bkrs_solicitantelivrorecebido
+        {
+            [System.Diagnostics.DebuggerNonUserCode()]
+            get
+            {
+                return this.GetAttributeValue<System.Nullable<bool>>("bkrs_solicitantelivrorecebido");
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.SetAttributeValue("bkrs_solicitantelivrorecebido", value);
+            }
+        }
+
+        [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bkrs_solicitantelivrorecebidoname")]
+        public string bkrs_solicitantelivrorecebidoName
+        {
+            [System.Diagnostics.DebuggerNonUserCode()]
+            get
+            {
+                if (this.FormattedValues.Contains("bkrs_solicitantelivrorecebido"))
+                {
+                    return this.FormattedValues["bkrs_solicitantelivrorecebido"];
+                }
+                else
+                {
+                    return default(string);
+                }
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["bkrs_solicitantelivrorecebido"] = value;
+            }
         }
 
         /// <summary>
@@ -307,6 +477,11 @@ namespace BookRaiders.Earlybound
             get
             {
                 return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdby");
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.SetAttributeValue("createdby", value);
             }
         }
 
@@ -325,6 +500,11 @@ namespace BookRaiders.Earlybound
                     return default(string);
                 }
             }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["createdby"] = value;
+            }
         }
 
         [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdbyyominame")]
@@ -342,6 +522,11 @@ namespace BookRaiders.Earlybound
                     return default(string);
                 }
             }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["createdby"] = value;
+            }
         }
 
         /// <summary>
@@ -354,6 +539,11 @@ namespace BookRaiders.Earlybound
             get
             {
                 return this.GetAttributeValue<System.Nullable<System.DateTime>>("createdon");
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.SetAttributeValue("createdon", value);
             }
         }
 
@@ -390,6 +580,11 @@ namespace BookRaiders.Earlybound
                     return default(string);
                 }
             }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["createdonbehalfby"] = value;
+            }
         }
 
         [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfbyyominame")]
@@ -406,6 +601,11 @@ namespace BookRaiders.Earlybound
                 {
                     return default(string);
                 }
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["createdonbehalfby"] = value;
             }
         }
 
@@ -438,6 +638,11 @@ namespace BookRaiders.Earlybound
             {
                 return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedby");
             }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.SetAttributeValue("modifiedby", value);
+            }
         }
 
         [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedbyname")]
@@ -454,6 +659,11 @@ namespace BookRaiders.Earlybound
                 {
                     return default(string);
                 }
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["modifiedby"] = value;
             }
         }
 
@@ -472,6 +682,11 @@ namespace BookRaiders.Earlybound
                     return default(string);
                 }
             }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["modifiedby"] = value;
+            }
         }
 
         /// <summary>
@@ -484,6 +699,11 @@ namespace BookRaiders.Earlybound
             get
             {
                 return this.GetAttributeValue<System.Nullable<System.DateTime>>("modifiedon");
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.SetAttributeValue("modifiedon", value);
             }
         }
 
@@ -520,6 +740,11 @@ namespace BookRaiders.Earlybound
                     return default(string);
                 }
             }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["modifiedonbehalfby"] = value;
+            }
         }
 
         [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfbyyominame")]
@@ -537,6 +762,11 @@ namespace BookRaiders.Earlybound
                     return default(string);
                 }
             }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["modifiedonbehalfby"] = value;
+            }
         }
 
         /// <summary>
@@ -549,6 +779,11 @@ namespace BookRaiders.Earlybound
             get
             {
                 return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("organizationid");
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.SetAttributeValue("organizationid", value);
             }
         }
 
@@ -566,6 +801,11 @@ namespace BookRaiders.Earlybound
                 {
                     return default(string);
                 }
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["organizationid"] = value;
             }
         }
 
@@ -620,6 +860,11 @@ namespace BookRaiders.Earlybound
                     return default(string);
                 }
             }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["statecode"] = value;
+            }
         }
 
         /// <summary>
@@ -654,6 +899,11 @@ namespace BookRaiders.Earlybound
                 {
                     return default(string);
                 }
+            }
+            [System.Diagnostics.DebuggerNonUserCode()]
+            set
+            {
+                this.FormattedValues["statuscode"] = value;
             }
         }
 
@@ -704,24 +954,10 @@ namespace BookRaiders.Earlybound
             {
                 return this.GetAttributeValue<System.Nullable<long>>("versionnumber");
             }
-        }
-
-        /// <summary>
-        /// N:1 bkrs_emprestimolivro_livro_bkrs_livro
-        /// </summary>
-        [Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bkrs_livro")]
-        [Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("bkrs_emprestimolivro_livro_bkrs_livro")]
-        public BookRaiders.Earlybound.bkrs_livro bkrs_emprestimolivro_livro_bkrs_livro
-        {
-            [System.Diagnostics.DebuggerNonUserCode()]
-            get
-            {
-                return this.GetRelatedEntity<BookRaiders.Earlybound.bkrs_livro>("bkrs_emprestimolivro_livro_bkrs_livro", null);
-            }
             [System.Diagnostics.DebuggerNonUserCode()]
             set
             {
-                this.SetRelatedEntity<BookRaiders.Earlybound.bkrs_livro>("bkrs_emprestimolivro_livro_bkrs_livro", null, value);
+                this.SetAttributeValue("versionnumber", value);
             }
         }
 
