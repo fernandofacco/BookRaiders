@@ -117,17 +117,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\BusinessBase.cs" />
+    <Compile Include="Business\EmprestimoLivroBO.cs" />
+    <Compile Include="Business\LivroBO.cs" />
     <Compile Include="Business\UsuarioBO.cs" />
-    <Compile Include="Business\TabelaTesteBO.cs" />
-    <Compile Include="Earlybound\bkrz_tabelateste.cs" />
     <Compile Include="Earlybound\bkrs_usuario.cs" />
     <Compile Include="Earlybound\bkrs_livro.cs" />
     <Compile Include="Earlybound\bkrs_emprestimolivro.cs" />
     <Compile Include="Earlybound\CrmServiceContext.cs" />
     <Compile Include="Earlybound\OptionSets.cs" />
+    <Compile Include="Plugins\EmprestimoLivro\PostOperationAndamento.cs" />
+    <Compile Include="Plugins\EmprestimoLivro\PostOperationStatus.cs" />
+    <Compile Include="Plugins\Livro\PreOperation.cs" />
     <Compile Include="Plugins\PluginBase.cs" />
-    <Compile Include="Plugins\TabelaTeste\PostOperation.cs" />
-    <Compile Include="Plugins\Usuario\PreValidation.cs" />
+    <Compile Include="Plugins\Usuario\VerificarCredenciais.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +146,7 @@
     <Content Include="Web Resources\bkrs_js_usuario.js" />
     <Content Include="Web Resources\bkrz_js_tabelateste.js" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.targets" Condition="Exists('$(SolutionDir)\packages\MSBuild.ILMerge.Task.1.0.5\build\MSBuild.ILMerge.Task.targets')" />
 </Project>

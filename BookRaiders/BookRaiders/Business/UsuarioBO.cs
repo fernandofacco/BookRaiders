@@ -1,4 +1,5 @@
-﻿using BookRaiders.Earlybound;
+﻿using BookRaiders.Business;
+using BookRaiders.Earlybound;
 using Microsoft.Xrm.Sdk;
 using System;
 using System.Collections.Generic;
@@ -15,30 +16,65 @@ namespace BookRaiders.Business
         {
         }
 
-        public void VerificarCpfExistente(bkrs_usuario usuario)
+        public bool VerificarCpfExistente(string cpf, Guid idUsuario)
         {
-            List<bkrs_usuario> listaUsuarios = ObterUsuariosCpfIguais(usuario);
+            List<bkrs_usuario> listaUsuarios = ObterUsuariosCpfIguais(cpf, idUsuario);
 
             if (listaUsuarios.Count > 0)
             {
-                throw new InvalidPluginExecutionException("Erro ao cadastrar usuário: CPF já registrado.");
+                return true;
             }
+            return false;
         }
 
-        public List<bkrs_usuario> ObterUsuariosCpfIguais(bkrs_usuario usuario)
+        public List<bkrs_usuario> ObterUsuariosCpfIguais(string cpf, Guid idUsuario)
         {
             List<bkrs_usuario> listaUsuarios = new List<bkrs_usuario>();
 
-            if (usuario != null)
+            if (cpf != null)
             {
                 using (var orgContext = new CrmServiceContext(this.serviceAdmin))
                 {
                     listaUsuarios = orgContext.bkrs_usuarioSet
-                        .Where(w => w.bkrs_cpf.Equals(usuario.bkrs_cpf) && w.Id != usuario.Id)
+                        .Where(w => w.bkrs_cpf.Equals(cpf) && w.Id != idUsuario)
                         .Select(s => new bkrs_usuario()
                         {
                             Id = s.Id,
                             bkrs_cpf = s.bkrs_cpf,
+                        }).ToList();
+
+                    return listaUsuarios;
+                }
+            }
+
+            return listaUsuarios;
+        }
+
+        public bool VerificarEmailExistente(string email, Guid idUsuario)
+        {
+            List<bkrs_usuario> listaUsuarios = ObterUsuariosEmailIguais(email, idUsuario);
+
+            if (listaUsuarios.Count > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public List<bkrs_usuario> ObterUsuariosEmailIguais(string email, Guid idUsuario)
+        {
+            List<bkrs_usuario> listaUsuarios = new List<bkrs_usuario>();
+
+            if (email != null)
+            {
+                using (var orgContext = new CrmServiceContext(this.serviceAdmin))
+                {
+                    listaUsuarios = orgContext.bkrs_usuarioSet
+                        .Where(w => w.bkrs_email.Equals(email) && w.Id != idUsuario)
+                        .Select(s => new bkrs_usuario()
+                        {
+                            Id = s.Id,
+                            bkrs_email = s.bkrs_email,
                         }).ToList();
 
                     return listaUsuarios;

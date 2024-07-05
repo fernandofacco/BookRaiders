@@ -13,6 +13,7 @@ namespace BookRaiders.Plugins
         private IOrganizationServiceFactory serviceFactory { get; set; }
         private IOrganizationService service { get; set; }
         private IOrganizationService serviceAdmin { get; set; }
+        private IPluginExecutionContext PluginExecutionContext { get; set; }
 
         public void Execute(IServiceProvider serviceProvider)
         {
@@ -20,32 +21,32 @@ namespace BookRaiders.Plugins
             this.serviceFactory = (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
             this.service = serviceFactory.CreateOrganizationService(context.UserId);
             this.serviceAdmin = serviceFactory.CreateOrganizationService(null);
+            this.PluginExecutionContext = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
 
-            ExecutePlugin(this.context, this.serviceFactory, this.service, this.serviceAdmin);
+            ExecutePlugin(this.context, this.serviceFactory, this.service, this.serviceAdmin, this.PluginExecutionContext);
         }
 
-        protected virtual void ExecutePlugin(IPluginExecutionContext context, IOrganizationServiceFactory serviceFactory, IOrganizationService service, IOrganizationService serviceAdmin)
+        protected virtual void ExecutePlugin(IPluginExecutionContext context, IOrganizationServiceFactory serviceFactory, IOrganizationService service, IOrganizationService serviceAdmin, IPluginExecutionContext PluginExecutionContext)
         {
 
         }
 
-        internal T GetTarget<T>(IPluginExecutionContext context) where T : Entity
+        internal T GetTarget<T>() where T : Entity
         {
-            var target = context.InputParameters["Target"] as Entity;
+            var target = PluginExecutionContext.InputParameters["Target"] as Entity;
 
             return target.ToEntity<T>();
         }
 
-        internal T GetPreImage<T>(IPluginExecutionContext context, string preImageName = "PreImage") where T : Entity
+        internal T GetPreImage<T>(string preImageName = "PreImage") where T : Entity
         {
-            var entity = context.PreEntityImages[preImageName] as Entity;
+            var entity = PluginExecutionContext.PreEntityImages[preImageName] as Entity;
             return entity.ToEntity<T>();
         }
 
-        internal T GetPostImage<T>(IPluginExecutionContext context, string postImageName = "PostImage") where T : Entity
+        internal T GetPostImage<T>(string postImageName = "PostImage") where T : Entity
         {
-            var image = context.PostEntityImages[postImageName] as Entity;
-
+            var image = PluginExecutionContext.PostEntityImages[postImageName] as Entity;
             return image.ToEntity<T>();
         }
     }
